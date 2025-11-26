@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static To-Do List (HTML & CSS Only)</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>My To-Do List</h1>
+      </header>
+
+      <div class="input-container">
+        <input
+          type="text"
+          id="new-task"
+          placeholder="What needs to be done?"
+          autocomplete="off"
+        />
+        <button id="add-btn">Add</button>
+      </div>
+
+      <ul class="task-list">
+        <!-- Completed Task -->
+        <li class="task-item">
+          <div class="checkbox checked"></div>
+          <div class="task-content">
+            <div class="task-text completed">Finish project proposal</div>
+            <span class="status completed">Completed</span>
+          </div>
+        </li>
+
+        <!-- Pending Task -->
+        <li class="task-item">
+          <div class="checkbox"></div>
+          <div class="task-content">
+            <div class="task-text">Review pull requests</div>
+            <span class="status pending">Pending</span>
+          </div>
+        </li>
+
+        <!-- Another Pending Task -->
+        <li class="task-item">
+          <div class="checkbox"></div>
+          <div class="task-content">
+            <div class="task-text">Call client at 3 PM</div>
+            <span class="status pending">Pending</span>
+          </div>
+        </li>
+
+        <!-- Completed Task -->
+        <li class="task-item">
+          <div class="checkbox checked"></div>
+          <div class="task-content">
+            <div class="task-text completed">Update documentation</div>
+            <span class="status completed">Completed</span>
+          </div>
+        </li>
+      </ul>
+
+      <!-- Uncomment below for empty state example -->
+      <!--
+    <div class="empty-state">
+      <p>No tasks yet!<br>Add one above to get started</p>
+    </div>
+    -->
+
+      <footer>
+        Pure HTML & CSS • No JavaScript • Perfect for design mockups
+      </footer>
+    </div>
+  </body>
+</html>
