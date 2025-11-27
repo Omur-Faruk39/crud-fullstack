@@ -8,6 +8,7 @@ const schrema = Joi.object({
 const deleteTodo = (req, res) => {
   const { error, value } = schrema.validate(req.body);
 
+  console.log(req.body);
   if (error) {
     res.status(400).send({
       status: "not ok",

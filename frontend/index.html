@@ -2,74 +2,48 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Static To-Do List (HTML & CSS Only)</title>
+    <title>Todo List</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="container">
-      <header>
-        <h1>My To-Do List</h1>
+    <main class="app">
+      <header class="header">
+        <div class="title">Todo List (Dark Theme)</div>
       </header>
 
-      <div class="input-container">
-        <input
-          type="text"
-          id="new-task"
-          placeholder="What needs to be done?"
-          autocomplete="off"
-        />
-        <button id="add-btn">Add</button>
+      <!-- Input fields -->
+      <div class="inputs">
+        <input type="text" id="taskInput" placeholder="Enter task" />
+        <select name="statusInput" id="statusInput">
+          <option value="ONGOING" selected>ONGOING</option>
+          <option value="INCOMPLETE">INCOMPLATE</option>
+          <option value="COMPLETE">COMPLATE</option>
+        </select>
+        <button class="add-btn">Add</button>
       </div>
 
-      <ul class="task-list">
-        <!-- Completed Task -->
-        <li class="task-item">
-          <div class="checkbox checked"></div>
-          <div class="task-content">
-            <div class="task-text completed">Finish project proposal</div>
-            <span class="status completed">Completed</span>
+      <!-- Task list -->
+      <section class="list" id="todoList">
+        <div class="item">
+          <input type="text" class="task" value="task" disabled />
+          <select
+            name="statusInput"
+            value="INCOMPLATE"
+            class="statusInput"
+            disabled
+          >
+            <option value="ONGOING">ONGOING</option>
+            <option value="INCOMPLATE">INCOMPLATE</option>
+            <option value="COMPLATE">COMPLATE</option>
+          </select>
+          <div>
+            <button class="delete-btn">DELETE</button>
+            <button class="delete-btn edit">EDIT</button>
           </div>
-        </li>
+        </div>
+      </section>
+    </main>
 
-        <!-- Pending Task -->
-        <li class="task-item">
-          <div class="checkbox"></div>
-          <div class="task-content">
-            <div class="task-text">Review pull requests</div>
-            <span class="status pending">Pending</span>
-          </div>
-        </li>
-
-        <!-- Another Pending Task -->
-        <li class="task-item">
-          <div class="checkbox"></div>
-          <div class="task-content">
-            <div class="task-text">Call client at 3 PM</div>
-            <span class="status pending">Pending</span>
-          </div>
-        </li>
-
-        <!-- Completed Task -->
-        <li class="task-item">
-          <div class="checkbox checked"></div>
-          <div class="task-content">
-            <div class="task-text completed">Update documentation</div>
-            <span class="status completed">Completed</span>
-          </div>
-        </li>
-      </ul>
-
-      <!-- Uncomment below for empty state example -->
-      <!--
-    <div class="empty-state">
-      <p>No tasks yet!<br>Add one above to get started</p>
-    </div>
-    -->
-
-      <footer>
-        Pure HTML & CSS • No JavaScript • Perfect for design mockups
-      </footer>
-    </div>
+    <script type="module" src="./index.js"></script>
   </body>
 </html>
