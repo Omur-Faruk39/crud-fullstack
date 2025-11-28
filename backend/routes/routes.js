@@ -7,9 +7,10 @@ import updateTodo from "../controller/updateTodoController.js";
 const router = express.Router();
 
 // Define your routes here
-router.get("/", getTodos);
-router.post("/", addTodo);
-router.delete("/", deleteTodo);
-router.patch("/", updateTodo);
+router
+  .get("/", getTodos)
+  .post("/", addTodo)
+  .delete("/", deleteTodo)
+  .patch("/", updateTodo);
 
 export default router;
